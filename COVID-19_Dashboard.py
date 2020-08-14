@@ -513,7 +513,7 @@ def New_Cases_State_Wise(State):
     fig11.update_xaxes(gridcolor=Grid_Color,tickfont=Tick_Font)
     fig11.update_yaxes(gridcolor=Grid_Color,tickfont=Tick_Font)
     fig11.update_layout(plot_bgcolor=Page_Background,paper_bgcolor=Page_Background,
-                       title='CASES RECORDED ON '+Last_Refreshed+' for '+State,title_x=0.5,titlefont=Fig_Title_Font,font=Fig_Font)
+                       title='CASES RECORDED ON '+India.Date.max().strftime('%Y-%m-%d')+' for '+State,title_x=0.5,titlefont=Fig_Title_Font,font=Fig_Font)
     return fig11
 
 
