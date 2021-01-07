@@ -127,10 +127,11 @@ for x in range(l):
     summary['Date']=j['data'][x]['day']
     regional=regional.replace(['Andaman and Nicobar Islands','Arunachal Pradesh','Daman and Diu','Delhi','Dadar Nagar Haveli',
                                      'Dadra and Nagar Haveli and Daman and Diu','Orissa','Jammu and Kashmir','Jharkhand#',
-                                    'Madhya Pradesh#','Nagaland#','Telengana','Telangana***','Ladakh'],
+                                    'Madhya Pradesh#','Nagaland#','Telengana','Telangana***','Ladakh','Chandigarh***','Maharashtra***','Punjab***'],
                                     ['Andaman & Nicobar Island','Arunanchal Pradesh','Daman & Diu','NCT of Delhi',
                                      'Dadara & Nagar Havelli','Dadara & Nagar Havelli','Odisha','Jammu & Kashmir','Jharkhand',
-                                    'Madhya Pradesh','Nagaland','Telangana','Telangana','Jammu & Kashmir'])
+                                    'Madhya Pradesh','Nagaland','Telangana','Telangana','Jammu & Kashmir','Chandigarh','Maharashtra','Punjab'])
+
     States=States.append(regional)
     India=India.append(summary)
 India['Date']=pd.to_datetime(India['Date'])
