@@ -64,10 +64,11 @@ Day_Wise=pd.DataFrame()
 for i in range(len(j)):
     temp_df=pd.DataFrame(j[i]['timeline']).rename_axis('Date').reset_index()
     temp_df['Country']=j[i]['country']
-    temp_df['Code']=[i for i in Country_ISO.loc[Country_ISO.Country==j[i]['country'],'Codes']][0] if len([i for i in Country_ISO.loc[Country_ISO.Country==j[i]['country'],'Codes']])>0 else np.nan
+    code=Country_ISO.loc[Country_ISO.Country==j[i]['country'],'Codes'].values
+    temp_df['Code']=code[0] if len(code)>0 else np.nan
     Day_Wise=pd.concat([Day_Wise,temp_df],ignore_index=True)
 Day_Wise.dropna(subset=['Code'],inplace=True)
-Day_Wise['Date']=pd.to_datetime(Day_Wise['Date'])
+Day_Wise['Date']=pd.to_datetime(Day_Wise['Date'],format="%m/%d/%y")
 Day_Wise['Active']=Day_Wise['cases']-Day_Wise['deaths']-Day_Wise['recovered']
 Day_Wise.rename(columns={'cases':'Confirmed','deaths':'Deaths','recovered':'Recovered'},inplace=True)
 Day_Wise=Day_Wise[['Date','Country','Code','Confirmed','Active','Recovered','Deaths']]
@@ -139,7 +140,7 @@ India['Week']=India['Date'].dt.strftime('WK %U-%Y')
 India['Month']=India['Date'].dt.strftime('%b-%Y')
 India['Year']=India['Date'].dt.year
 
-States['Date']=pd.to_datetime(States['Date'])
+States['Date']=pd.to_datetime(States['Date'],format='%Y-%m-%d')
 DateRange=[States['Date'].min()+datetime.timedelta(days=x) for x in range((States['Date'].max()-States['Date'].min()).days+1)]
 States=States.groupby(['loc','Date']).mean()
 States=States.reindex(pd.MultiIndex.from_product([States.index.get_level_values(0).unique(),DateRange],names=['State','Date'])).fillna(0)
