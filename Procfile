@@ -1,1 +1,1 @@
-web: gunicorn COVID-19_Dashboard:server --preload --timeout 60
+web: gunicorn COVID-19_Dashboard:server --timeout 60
