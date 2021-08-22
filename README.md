@@ -16,6 +16,8 @@ The dashboard provides information on the latest data available on COVID-19, suc
 ### Video
 ![App Screenshot](https://github.com/bharathngowda/COVID_19_Dashboard/blob/master/video.gif)
 
+### Screenshots
+
 #### Global Tab
 
 ![App Screenshot](https://github.com/bharathngowda/COVID_19/blob/master/Screenshots/Figure-6.png)
