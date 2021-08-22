@@ -113,10 +113,17 @@ The main Packages used are -
 - Pandas & Numpy - to process the data and convert it into a format that is required by the dashboard.
 
 
-## How to Run this project
+### Installation
 
-- **Step 1** - Download the project
-- **Step 2** - Create a virtual environment and install dependencies from requirements.txt
-- **Step 3** - Run the COVID-19_Dashboard.py file
+To run this notebook interactively:
 
- ***Note - Python 3.6+ required***  
+1. Download this repository in a zip file by clicking on this [link](https://github.com/bharathngowda/COVID_19_Dashboard/archive/refs/heads/master.zip) or execute this from the terminal:
+`https://github.com/bharathngowda/COVID_19_Dashboard.git`
+
+2. Install [virtualenv](http://virtualenv.readthedocs.org/en/latest/installation.html).
+3. Navigate to the directory where you unzipped or cloned the repo and create a virtual environment with `virtualenv env`.
+4. Activate the environment with `source env/bin/activate`
+5. Install the required dependencies with `pip install -r requirements.txt`.
+6. Execute `python file COVID-19_Dashboard.py` from the command line or terminal.
+7. Copy the link `http://localhost:8888` from command prompt and paste in browser and the dashboard will load.
+8. When you're done deactivate the virtual environment with `deactivate`.
