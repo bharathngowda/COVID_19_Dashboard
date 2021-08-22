@@ -13,7 +13,8 @@ There are 2 tabs-
 
 The dashboard provides information on the latest data available on COVID-19, such as new cases, deaths, recovered, and other valuable data to gauge the transmission and response to the pandemic. 
 
-
+### Video
+![App Screenshot](https://github.com/bharathngowda/COVID_19_Dashboard/blob/master/video.gif)
 
 #### Global Tab
 
