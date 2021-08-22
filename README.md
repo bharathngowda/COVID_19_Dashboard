@@ -127,6 +127,6 @@ To run this notebook interactively:
 3. Navigate to the directory where you unzipped or cloned the repo and create a virtual environment with `virtualenv env`.
 4. Activate the environment with `source env/bin/activate`
 5. Install the required dependencies with `pip install -r requirements.txt`.
-6. Execute `python file COVID-19_Dashboard.py` from the command line or terminal.
+6. Execute `python COVID-19_Dashboard.py` from the command line or terminal.
 7. Copy the link `http://localhost:8888` from command prompt and paste in browser and the dashboard will load.
 8. When you're done deactivate the virtual environment with `deactivate`.
