@@ -1,1 +1,1 @@
-gunicorn COVID-19_Dashboard:server
+gunicorn covid_app:server
